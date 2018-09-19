@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+       <script src="app/assets/js/jquery.min.js"></script>
+      <script src="app/assets/js/jquery.scrolly.min.js"></script>
+      <script src="app/assets/js/skel.min.js"></script>
+      <script src="app/assets/js/util.js"></script>
+      <script src="app/assets/js/main.js"></script>
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="stylesheet" href="app/assets/css/main.css" />
+            <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
+       <script type="application/json" src="/artisansearchEntry.bundle.js"></script>
+<style>
+* {
+    box-sizing: border-box;
+}
+body
+{
+  background-color: #F2C320;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Style the buttons */
+.btn1 { 
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #AA8912;
+    text-align: center;
+    margin:auto;
+    display: block;
+    cursor: pointer;
+}
+
+.btn1:hover {
+    background-color: #ddd;
+}
+
+.btn1.active {
+    background-color: #AA8912;
+    color: white;
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+      <header id="header">
+        <a href="index.html" class="logo"><strong>Ministry Of Tribal Affairs</strong></a>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+    <!-- Nav -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="profileagent.html">View Profile</a></li>
+        
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+      </nav>
+      <br>
+<center><h2>Agents List</h2>
+
+<p>Click on a button to choose list view or grid view.</p></center>
+
+<div id="btnContainer">
+<button class="btn1" onclick="listView()" style="width:100%;"><i class="fa fa-bars"></i> List</button> 
+
+<button class="btn1" onclick="gridView()" style="width:100%;"><i class="fa fa-th-large"></i> Grid</button>
+</div>
+<br>
+</center>
+<div class="row1">
+  <div class="column1">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column1">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+  </div>
+</div>  
+
+<div class="row1">
+  <div class="column1">
+    <h2>Column 3</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column1">
+    <h2>Column 4</h2>
+    <p>Some text..</p>
+  </div>
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column1");
+
+// Declare a loop variable
+var i;
+
+// List View
+function listView() {
+    for (i = 0; i < elements.length; i++) {
+        
+        
+        elements[i].style.width = "100%";
+        if(i%2==0)
+         elements[i].style.background = "#E4A92B";
+         else
+          elements[i].style.background = "#F9C24C";
+         // elements[i].innerHTML="PP";
+    }
+
+   populate();
+
+}
+
+// Grid View
+function gridView() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "50%";
+         if(i%2==0)
+         elements[i].style.background = "#E4A92B";
+
+         else
+          elements[i].style.background = "#F9C24C";
+                  elements[i].innerHTML="PP";
+    }
+    //populate();
+}
+
+/* Optional: Add active class to the current button (highlight it) */
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<!-- Scripts -->
+
+
+<br>
+<br>
+</body>
+</html>

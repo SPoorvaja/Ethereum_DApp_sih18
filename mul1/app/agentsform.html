@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>agentss</title>
+  
+  <script src="app/assets/js/jquery.min.js"></script>
+  <script src="app/assets/js/jquery.scrolly.min.js"></script>
+  <script src="app/assets/js/skel.min.js"></script>
+  <script src="app/assets/js/util.js"></script>
+  <script src="app/assets/js/main.js"></script>
+
+   <link rel="stylesheet" href="app/css/style.css">
+  <script type="application/json" src="/agentsformEntry.bundle.js"></script>
+</head>
+<body>
+<!-- <h1>Hey f</h1> -->
+<div class="form">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Register</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+       
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Agent Sign-Up</h1>
+          
+          <form >
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text" id="fname" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text" id="lname" required autocomplete="off"/>
+            </div>
+          </div>
+            <div class="field-wrap">
+            <!-- <label>
+              Location<span class="req">*</span>
+            </label> -->
+            <!--<input type="text" id="locality" required autocomplete="off"/>-->
+            <div onclick="getLocation()"><font color="white" size="5"><center>Get location</center></font></div>
+
+            <p id="demo"></p>
+            
+          </div>
+          <div class="field-wrap">
+            <label>
+             <span class="req">*</span>
+            </label>
+            <input type="text" id="latitude" autocomplete="off" value="1"/>
+          </div> 
+          <div class="field-wrap">
+            <label>
+              <span class="req">*</span>
+            </label>
+            <input type="text" id="longitude" autocomplete="off" value="1"/>
+          </div> 
+          
+          <div class="field-wrap">
+            <label>
+             <!-- Account address --><span class="req">*</span>
+            </label>
+            <input type="text" id="address" value="0xca35b7d915458ef540ade6068dfe2f44e8fa733c" autocomplete="off"/>
+          </div> 
+              
+                    <div class="field-wrap">
+            <label>
+              Contact Number<span class="req">*</span>
+            </label>
+            <input type="text" id="contact" required autocomplete="off"/>
+          </div>
+
+
+          <div class="field-wrap">
+            <label>
+              Username<span class="req">*</span>
+            </label>
+            <input type="text" id="uname" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password" id="upass" required autocomplete="off"/>
+          </div>
+          
+          <div class="button button-block" onclick="newregistration()"/><center>Register</center></div>
+          </form>
+          <br><br>
+          Enter name:
+          <input type="text" id="uname3"><br>
+          Enter pass:
+          <input type="text" id="upass3"><br>
+          <div type="submit" class="button button-block" value="getacc" onclick="checking()">Checkkk</div>
+
+          
+
+        </div>
+        
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form >
+          
+            <div class="field-wrap">
+            <label>
+              Username<span class="req">*</span>
+            </label>
+            <input type="text" id="uname4" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password" id="upass4" required autocomplete="off"/>
+          </div>
+          
+       
+          
+          <div class="button button-block" onclick="validate()"/><center>Log In</center></div>
+          
+          </form>
+
+          <input type="hidden" id="uname_passed" value="12">
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+</body>
+</html>

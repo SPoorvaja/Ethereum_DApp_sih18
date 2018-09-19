@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>agentss</title>
+<link href="/app.css" rel="stylesheet"><link href="/agentsformEntry.css" rel="stylesheet"><link href="/agentsformEntry.6ef886f32a0e8f2d323575753c2988aa.css" rel="stylesheet"></head>
+<body>
+<!-- <h1>Hey agent</h1> -->
+<div class="form">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Register</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+    
+           
+      </ul>
+      
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Agent Sign-Up</h1>
+          
+          <form action="/" method="post">
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text" id="fname" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text" id="lname" required autocomplete="off"/>
+            </div>
+          </div>
+                    <div class="field-wrap">
+            <label>
+              Locality<span class="req">*</span>
+            </label>
+            <input type="text" id="locality" required autocomplete="off"/>
+          </div>
+           <div class="field-wrap">
+            <label>
+              Skillset Requirements<span class="req">*</span>
+            </label>
+            <input type="text" id="skills" required autocomplete="off"/>
+          </div>
+          
+                    <div class="field-wrap">
+            <label>
+              Contact Number<span class="req">*</span>
+            </label>
+            <input type="text" id="contact" required autocomplete="off"/>
+          </div>
+
+
+          <div class="field-wrap">
+            <label>
+              Username<span class="req">*</span>
+            </label>
+            <input type="text" id="uname" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password" id="upass" required autocomplete="off"/>
+          </div>
+          
+          <button type="submit" class="button button-block"/>Register</button>
+          <br><br>
+          Enter name:
+          <input type="text" id="uname3"><br>
+          Enter pass:
+          <input type="text" id="upass3"><br>
+          <button type="submit" class="button button-block" value="getacc" onclick="checking()">Checkkk</button>
+          
+          </form>
+
+        </div>
+        
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form action="/" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Username<span class="req">*</span>
+            </label>
+            <input type="text" id="uname4" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password" id="upass4" required autocomplete="off"/>
+          </div>
+          
+       
+          
+          <button class="button button-block" onclick="validate()"/>Log In</button>
+          
+          </form>
+        
+
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+<script type="text/javascript" src="/agentsformEntry.bundle.js"></script></body>
+</html>
